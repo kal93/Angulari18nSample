@@ -31,7 +31,7 @@
           </div>
     
            <div class="stack-form-controls-vertically">
-              <div >
+              <div>
                 <sq-textbox type="text" 
                 [placeholder]="PatientID" tabOrder="4"
                 formControlName="patientId"  >
@@ -44,7 +44,7 @@
                 formControlName="nhsNo"  >
                 </sq-textbox>
               </div>
-              <div >
+              <div>
                   <sq-textbox type="text" 
                   [placeholder]="BillingAccountNumber" tabOrder="6"
                   formControlName="billAccount">
@@ -53,7 +53,7 @@
               </div>
     
                <div class="stack-form-controls-vertically">
-              <div >
+              <div>
                 <sq-select 
                 [placeholder]="SelectHID"
                 required= "true"
@@ -71,21 +71,19 @@
                     [checked]="sqChecked"
                     name="sqCheckbox1"
                     (sqChange)="sqChange($event)"
-                    i18n="Check All Checkbox |Checks all the HIDs in select Dropdown@@CheckAllCheckBox" l10nTranslate> CheckAll </sq-checkbox>
+                    i18n="Check All Checkbox |Checks all the HIDs in select Dropdown@@CheckAllCheckBox" > CheckAll </sq-checkbox>
                    </div>
               </div>
             </div>
   
-            <div class="select-all-section">
-               
-            </div>
-  
             <div class="form-button-section">
   
-                <sq-button type="reset" variant="raised-button" color="basic" l10nTranslate>Clear</sq-button>
+                <sq-button type="reset" variant="raised-button" color="basic"
+                i18n="Clear | Clear button text @@ClearButton">Clear</sq-button>
                 
                 <sq-button type="submit" variant="raised-button" color="primary"
-                (clickHandler)="submitForm()" l10nTranslate>Submit</sq-button>
+                (clickHandler)="submitForm()" 
+                i18n="Submit | Submit button text @@SubmitButton">Submit</sq-button>
               </div>
       </form>
     </div>
@@ -93,9 +91,9 @@
     
   </sq-card>
   <sq-card>
-      <p>Today : {{ today | date : 'full':'': browserLocale }}</p>
-
+      <!-- <p>Today : {{ today | date : 'full':'': browserLocale }}</p> -->
+      <div i18n=" ChangeLanguage | Change Language here @@ChangeLanguage">Change Language Here</div>
       <p>Extended Date Today : {{ today | extendedDate: 'full':'-0400'}}</p>
       <p>Currency : {{ a | currency: 'USD':'symbol':'4.2-2' }} </p>
-    </sq-card>
+  </sq-card>
   
