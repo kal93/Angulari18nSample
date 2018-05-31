@@ -58,6 +58,9 @@
           "configurations": {
             "production": {
               "browserTarget": "Sqi18nEx:build:production"
+            },
+            "ar": {
+             "browserTarget": "Sqi18nEx:build:ar"
             }
           }
         },

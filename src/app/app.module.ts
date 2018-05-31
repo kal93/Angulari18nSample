@@ -33,6 +33,10 @@ export function initResx(resx: TranslateService) {
   return () => resx.loadResx();
 }
 
+const locale = localStorage.getItem('localeId');
+
+// let locale22;
+
 registerLocaleData(localeAr, 'ar');
 registerLocaleData(localeFr, 'fr');
 
@@ -81,7 +85,7 @@ const routes = [
     },
     {
       provide: LOCALE_ID,
-      useValue: 'en'
+      useValue: locale
     },
     WindowRefService
   ],

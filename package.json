@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --verbose --port 4100",
+    "start": "ng serve --port 4100",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "i18n":"ng xi18n --output-path locale"
+    "i18n": "ng xi18n --output-path locale",
+    "start:ar": "ng serve --aot --i18nFile=src/locale/messages.ar.xlf --i18nFormat=xlf --locale ar"
   },
   "private": true,
   "dependencies": {
