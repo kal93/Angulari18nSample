@@ -16,9 +16,6 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import localeAr from '@angular/common/locales/ar-AE';
 import { ExtendedDatePipe } from './extended-date.pipe';
-import { LocaleService } from './locale.service';
-import { WindowRef } from './window.service';
-
 
 export function initResx(resx: TranslateService) {
   // const locale = document['locale'] as string;
@@ -82,40 +79,8 @@ const routes = [
       provide: APP_INITIALIZER,
       useFactory: initResx
     },
-    // {
-    //   provide: LOCALE_ID,
-    //   useValue : 'en'
-    //    deps: [LocaleService],
-    //    useFactory :
-    // },
     WindowRefService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  // locale: string;
-  // localeData: any;
-  // constructor() {
-  //   const locale = document ['locale'] as string;
-
-  //   switch (locale) {
-  //       case 'ar':
-  //       this.localeData = localeAr;
-  //       registerLocaleData(this.localeData, locale);
-  //       break;
-  //       default:
-  //       this.localeData = localeFr;
-  //       registerLocaleData(this.localeData, locale);
-  //   }
-  // }
-
-  constructor(private resx: TranslateService, private winRef: WindowRefService) {
-
-    // winRef.nativeWindow.document.locale = 'ar';
-    // console.log('[CONSTRUCTOR CALLED]', winRef.nativeWindow.document.locale);
-    // const locale = document['locale'] as string;
-    // console.log(`AppModule Locale------------>${locale}`);
-    // resx.resxPath = `/assets/${locale}.json`;
-  }
-
-}
+export class AppModule {}

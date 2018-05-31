@@ -1,3 +1,7 @@
+
+/**
+ * INCLUDED IN THE SQVUE PACKAGE, IMPORT IT FROM THERE DIRECTLY,  NO LONGER REQUIRED
+ */
 import {Injectable} from '@angular/core';
 
 function _window(): any {
