@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
   SqAppHeaderModule, SqTrasnlateModule, SqTextboxModule, SqButtonModule, SqSelectModule,
-  SqCardModule, SqCheckboxModule, TranslateService
+  SqCardModule, SqCheckboxModule, TranslateService, WindowRefService
 } from 'sqvue';
 import { Tab1Component } from './tab1/tab1.component';
 
@@ -88,7 +88,7 @@ const routes = [
     //    deps: [LocaleService],
     //    useFactory :
     // },
-    WindowRef
+    WindowRefService
   ],
   bootstrap: [AppComponent]
 })
@@ -109,7 +109,7 @@ export class AppModule {
   //   }
   // }
 
-  constructor(private resx: TranslateService, private winRef: WindowRef) {
+  constructor(private resx: TranslateService, private winRef: WindowRefService) {
 
     // winRef.nativeWindow.document.locale = 'ar';
     // console.log('[CONSTRUCTOR CALLED]', winRef.nativeWindow.document.locale);

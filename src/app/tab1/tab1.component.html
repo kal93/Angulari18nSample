@@ -63,7 +63,7 @@
                 [sqConfig]="sqHidListConfig"
                 [validationMessage]="sqSelectvalidationMessage">
                 </sq-select>
-                <div  >
+                <div>
                     <sq-checkbox formControlName ="checkAllCheckBox"
                     labelPosition='before'
                     tabOrder="7"
@@ -93,7 +93,7 @@
     
   </sq-card>
   <sq-card>
-      <p>Today : {{ today | date : 'full':'':browserLocale }}</p>
+      <p>Today : {{ today | date : 'full':'': browserLocale }}</p>
 
       <p>Extended Date Today : {{ today | extendedDate: 'full':'-0400'}}</p>
       <p>Currency : {{ a | currency: 'USD':'symbol':'4.2-2' }} </p>

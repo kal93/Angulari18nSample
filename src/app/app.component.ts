@@ -1,5 +1,5 @@
 import { Component, NgModuleRef, NgZone } from '@angular/core';
-import { SqAppHeaderSettingsModel, TranslateService } from 'sqvue';
+import { SqAppHeaderSettingsModel, TranslateService, WindowRefService } from 'sqvue';
 
 import { Direction } from '@angular/cdk/bidi';
 
@@ -19,7 +19,7 @@ export class AppComponent {
 
   appHeaderSettings: SqAppHeaderSettingsModel = <SqAppHeaderSettingsModel>{};
   appLogo: string;
-  constructor( private winRef: WindowRef, private translate: TranslateService ) {
+  constructor( private winRef: WindowRefService, private translate: TranslateService ) {
       const bLocale = localStorage.getItem('localeId');
       if (bLocale === 'ar') {
           this.winRef.nativeWindow.document.locale = bLocale;
