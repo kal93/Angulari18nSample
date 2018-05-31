@@ -79,6 +79,10 @@ const routes = [
       provide: APP_INITIALIZER,
       useFactory: initResx
     },
+    {
+      provide: LOCALE_ID,
+      useValue: 'en'
+    },
     WindowRefService
   ],
   bootstrap: [AppComponent]

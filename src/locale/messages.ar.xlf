@@ -4,7 +4,7 @@
     <body>
       <trans-unit id="CheckAllCheckBox" datatype="html">
         <source> CheckAll </source>
-        <target>CheckAll</target>
+        <target>تحقق من الكل</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/tab1/tab1.component.ts</context>
           <context context-type="linenumber">74</context>
@@ -14,7 +14,7 @@
       </trans-unit>
       <trans-unit id="ClearButton" datatype="html">
         <source>Clear</source>
-        <target>Clear</target>
+        <target>واضح</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/tab1/tab1.component.ts</context>
           <context context-type="linenumber">82</context>
@@ -24,7 +24,7 @@
       </trans-unit>
       <trans-unit id="SubmitButton" datatype="html">
         <source>Submit</source>
-        <target>Submit</target>
+        <target>خضع</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/tab1/tab1.component.ts</context>
           <context context-type="linenumber">86</context>
@@ -34,7 +34,7 @@
       </trans-unit>
       <trans-unit id="ChangeLanguage" datatype="html">
         <source>Change Language Here</source>
-        <target>Change Language Here</target>
+        <target>تغيير اللغة هنا</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/tab1/tab1.component.ts</context>
           <context context-type="linenumber">95</context>
