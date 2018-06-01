@@ -1,3 +1,13 @@
-<p>
-  tab2 works!
-</p>
+<sq-card>
+    <p> Date  : {{ today | extendedDate: 'full'}}</p>
+    <p> Date  : {{ today | extendedDate: 'fullDate'}}</p>
+    <p> dd/mm/yyyy  : {{ today | extendedDate :'dd/MM/yy'}}</p>
+    <p> yyyy/mm/dd  : {{ today | extendedDate :'yyyy/MM/dd'}}</p>
+    <p> Time  : {{ today | extendedDate :'HH:mm:ss a z'}}</p>
+    <p> Time with Timezone Offset : {{ today | extendedDate :'HH:mm:ss a z': '-0400'}}</p>
+    <!-- <p>Currency : {{ a | currency }} </p> -->
+    <p> Currency  : {{ a | extendedCurrency: 'USD' :'symbol':'2.2-4': browserLocale }} </p>
+    <p> Currency  : {{ a | extendedCurrency: 'AED' :'symbol':'2.2-4': browserLocale }} </p>
+    <!-- <p> Currency  : {{ a | customCurrency }} </p> -->
+
+</sq-card>

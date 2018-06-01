@@ -93,8 +93,9 @@
       <!-- <p>Today : {{ today | date : 'full':'': browserLocale }}</p> -->
       <div i18n=" ChangeLanguage | Change Language here @@ChangeLanguage">Change Language Here</div>
       <!-- <p> Today : {{ today | date: 'full':'-0400'}}</p> -->
-      <p>Extended Date Today : {{ today | extendedDate: 'full'}}</p>
+      <p> Date : {{ today | extendedDate: 'full'}}</p>
       <!-- <p>Currency : {{ a | currency }} </p> -->
-      <p>Extended Currency : {{ a | extendedCurrency: 'EUR' :'code':'2.2-4': browserLocale }} </p>
-  </sq-card>
+      <!-- <p>Extended Currency : {{ a | extendedCurrency: 'EUR' :'code':'2.2-4': browserLocale }} </p>
+      <p> Custom : {{a | customCurrency }} </p> -->
+    </sq-card>
   

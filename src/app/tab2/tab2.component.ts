@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab2Component implements OnInit {
 
+  today = Date.now();
+  a  = '420.024';
+
   constructor() { }
 
   ngOnInit() {

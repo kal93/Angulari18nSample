@@ -19,6 +19,7 @@ import localeIN from '@angular/common/locales/en-IN';
 import { ExtendedDatePipe } from './extended-date.pipe';
 import { ExtendedCurrencyPipe } from './extended-currency.pipe';
 import { Tab2Component } from './tab2/tab2.component';
+import { CustomCurrencyPipe } from './custom-currency.pipe';
 
 export function initResx(resx: TranslateService) {
   // const locale = document['locale'] as string;
@@ -66,7 +67,8 @@ const routes = [
     Tab1Component,
     ExtendedDatePipe,
     ExtendedCurrencyPipe,
-    Tab2Component
+    Tab2Component,
+    CustomCurrencyPipe
   ],
   imports: [
     BrowserModule,
