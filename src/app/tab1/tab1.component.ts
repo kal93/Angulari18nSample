@@ -12,7 +12,9 @@ import { SqSelectSettingsModel, TranslateService } from 'sqvue';
 export class Tab1Component implements OnInit, DoCheck {
 
   today = Date.now();
-  a  = '222';
+  a  = '420.024';
+
+  cFormat: string;
 
   sqChecked = false;
 
@@ -31,8 +33,8 @@ export class Tab1Component implements OnInit, DoCheck {
   sqSelectvalidationMessage: string;
 
   constructor( private formBuilder: FormBuilder, private translate: TranslateService ) {
-
-    let browserLocale = 'en';
+    this.cFormat = 'AED';
+    let browserLocale = document ['locale'] as string;
     console.log(browserLocale + '................');
 
     this.LastName = this.translate.getResx('LastName');

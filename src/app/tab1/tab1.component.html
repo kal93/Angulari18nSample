@@ -14,8 +14,7 @@
               </sq-textbox>
             </div>
               <div class="sq-text-box-div">
-              <sq-textbox type="text" 
-              
+              <sq-textbox type="text"
               [placeholder]="FirstName"
               tabOrder="2"
               formControlName="firstName">
@@ -93,7 +92,9 @@
   <sq-card>
       <!-- <p>Today : {{ today | date : 'full':'': browserLocale }}</p> -->
       <div i18n=" ChangeLanguage | Change Language here @@ChangeLanguage">Change Language Here</div>
-      <p>Extended Date Today : {{ today | extendedDate: 'full':'-0400'}}</p>
-      <p>Currency : {{ a | currency: 'USD':'symbol':'4.2-2' }} </p>
+      <!-- <p> Today : {{ today | date: 'full':'-0400'}}</p> -->
+      <p>Extended Date Today : {{ today | extendedDate: 'full'}}</p>
+      <!-- <p>Currency : {{ a | currency }} </p> -->
+      <p>Extended Currency : {{ a | extendedCurrency: 'EUR' :'code':'2.2-4': browserLocale }} </p>
   </sq-card>
   

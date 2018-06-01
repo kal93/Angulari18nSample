@@ -15,7 +15,10 @@ import { Tab1Component } from './tab1/tab1.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import localeAr from '@angular/common/locales/ar-AE';
+import localeIN from '@angular/common/locales/en-IN';
 import { ExtendedDatePipe } from './extended-date.pipe';
+import { ExtendedCurrencyPipe } from './extended-currency.pipe';
+import { Tab2Component } from './tab2/tab2.component';
 
 export function initResx(resx: TranslateService) {
   // const locale = document['locale'] as string;
@@ -39,6 +42,7 @@ const locale = localStorage.getItem('localeId');
 
 registerLocaleData(localeAr, 'ar');
 registerLocaleData(localeFr, 'fr');
+registerLocaleData(localeIN, 'ind');
 
 const routes = [
   {
@@ -47,7 +51,7 @@ const routes = [
   },
   {
     path: 'tab2',
-    component: Tab1Component
+    component: Tab2Component
   },
   // Default route
   {
@@ -60,7 +64,9 @@ const routes = [
   declarations: [
     AppComponent,
     Tab1Component,
-    ExtendedDatePipe
+    ExtendedDatePipe,
+    ExtendedCurrencyPipe,
+    Tab2Component
   ],
   imports: [
     BrowserModule,

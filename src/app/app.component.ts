@@ -13,6 +13,7 @@ export class AppComponent {
     dir: Direction = 'ltr';
 
     appHeaderSettings: SqAppHeaderSettingsModel = <SqAppHeaderSettingsModel>{};
+    maaz: string;
     appLogo: string;
     constructor(private winRef: WindowRefService, private translate: TranslateService) {
         const bLocale = localStorage.getItem('localeId');
@@ -27,27 +28,49 @@ export class AppComponent {
 
         // app header config
         this.appLogo = 'assets/sunquest-logo.svg';
+        this.maaz = this.translate.getResx('Maaz');
         this.appHeaderSettings.selectedTab = this.translate.getResx('Tab1');
         this.appHeaderSettings.tabList = [
             {
                 name: this.translate.getResx('Tab1'),
                 path: 'tab1'
-            },
+             },
             {
                 name: this.translate.getResx('Tab2'),
-                clickHandler: ($event, tabItem) => {
-                    console.log(tabItem.name + ' Clicked !!');
-                    this.appHeaderSettings.selectedTab = tabItem.name;
-                }
+                path: 'tab2'
             }
         ];
         this.appHeaderSettings.menuList = [
             {
-                name: this.translate.getResx('Help'),
+                name: 'Ar',
                 clickHandler: (event, item) => {
+                    item.name = 'ar';
                     console.log(item.name + ' Clicked !!');
+                    localStorage.setItem('localeId', item.name);
+                    console.log('locale set to:' + item.name);
+                    location.reload(true);
                 }
             },
+            {
+                name: 'En',
+                clickHandler: (event, item) => {
+                    item.name = 'en';
+                    console.log(item.name + ' Clicked !!');
+                    localStorage.setItem('localeId', item.name);
+                    console.log('locale set to:' + item.name);
+                    location.reload(true);
+                }
+            }// ,
+            // {
+            //     name: 'Fr',
+            //     clickHandler: (event, item) => {
+            //         item.name = 'fr';
+            //         console.log(item.name + ' Clicked !!');
+            //         localStorage.setItem('localeId', item.name);
+            //         console.log('locale set to:' + item.name);
+            //         location.reload(true);
+            //     }
+            // }
         ];
     }
 

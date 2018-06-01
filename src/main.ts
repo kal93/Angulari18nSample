@@ -26,13 +26,16 @@ declare const require;
 export function loadXLF() {
   // const locale = document ['locale'] as string;
   const locale = localStorage.getItem('localeId');
-  if ( !locale || locale == null ) {
-  console.log(`${locale}..Inside main.ts load xlf..`);
+  // below code can be replaced with i18n-providers, systemjs text plugin
+  if (!locale || locale == null) {
+    console.log(`${locale}..Inside main.ts load xlf..`);
     const xlfFile = require(`raw-loader!./locale/messages.en.xlf`);
     return xlfFile;
-  } else {  const xlfFile = require(`raw-loader!./locale/messages.${locale}.xlf`);
-  return xlfFile; }
+  } else {
+    const xlfFile = require(`raw-loader!./locale/messages.${locale}.xlf`);
+    return xlfFile;
   }
+}
 
 platformBrowserDynamic().bootstrapModule(AppModule, {
   missingTranslation: MissingTranslationStrategy.Error,
