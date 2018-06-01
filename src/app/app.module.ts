@@ -10,6 +10,8 @@ import {
   SqAppHeaderModule, SqTrasnlateModule, SqTextboxModule, SqButtonModule, SqSelectModule,
   SqCardModule, SqCheckboxModule, TranslateService, WindowRefService
 } from 'sqvue';
+import { MatInputModule } from '@angular/material';
+
 import { Tab1Component } from './tab1/tab1.component';
 
 import { registerLocaleData } from '@angular/common';
@@ -82,7 +84,8 @@ const routes = [
     SqCardModule,
     SqButtonModule,
     SqCheckboxModule,
-    SqSelectModule
+    SqSelectModule,
+    MatInputModule
   ],
   providers: [TranslateService,
     {
