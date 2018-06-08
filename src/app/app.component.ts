@@ -16,7 +16,8 @@ export class AppComponent {
     maaz: string;
     appLogo: string;
     constructor(private winRef: WindowRefService, private translate: TranslateService) {
-        const bLocale = localStorage.getItem('localeId');
+        // const bLocale = localStorage.getItem('localeId');
+        const bLocale = document ['locale'] as string;
         if (bLocale === 'ar') {
             this.winRef.nativeWindow.document.locale = bLocale;
             this.dir = 'rtl';

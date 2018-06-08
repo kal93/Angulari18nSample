@@ -24,8 +24,8 @@ import { Tab2Component } from './tab2/tab2.component';
 import { CustomCurrencyPipe } from './custom-currency.pipe';
 
 export function initResx(resx: TranslateService) {
-  // const locale = document['locale'] as string;
-  const locale = localStorage.getItem('localeId');
+   const locale = document['locale'] as string;
+  // const locale = localStorage.getItem('localeId');
   console.log(locale);
   if (locale !== undefined && locale !== null) {
     // provide the path for resource bundle/json file
