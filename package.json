@@ -12,7 +12,7 @@
     "start:ar": "ng build --prod --i18n-file src/locale/messages.ar.xlf --i18n-format xlf --i18n-locale ar",
     "build": "ng build --aot --output-path dist/ --base-href /Angulari18nSample/",
     "build:ar": "ng build --prod --output-path dist/ar --base-href /ar/ --i18n-file=src/locale/messages.ar.xlf --i18n-format xlf --i18n-locale ar",
-    "build:ar-base-href":"ng build --prod --output-path dist/ar --base-href /Angulari18nSample/ar/ --i18n-file=src/locale/messages.ar.xlf --i18n-format xlf --i18n-locale ar"
+    "build:ar-base-href": "ng build --prod --output-path dist/ar --base-href /Angulari18nSample/ar/ --i18n-file=src/locale/messages.ar.xlf --i18n-format xlf --i18n-locale ar"
   },
   "private": true,
   "dependencies": {
@@ -50,6 +50,7 @@
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.3.0",
+    "source-map-explorer": "^1.5.0",
     "sqvue": "file:sqvue-1.1.0.tgz",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
