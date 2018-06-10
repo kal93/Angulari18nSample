@@ -17,9 +17,9 @@ export class AppComponent {
     appLogo: string;
     constructor(private winRef: WindowRefService, private translate: TranslateService) {
         // const bLocale = localStorage.getItem('localeId');
-        const bLocale = document ['locale'] as string;
+        const bLocale = window.navigator.language;
         if (bLocale === 'ar') {
-            this.winRef.nativeWindow.document.locale = bLocale;
+           // this.winRef.nativeWindow.document.locale = bLocale;
             this.dir = 'rtl';
         }
         console.log('[CONSTRUCTOR CALLED]', this.winRef.nativeWindow.document.locale);

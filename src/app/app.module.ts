@@ -24,7 +24,7 @@ import { Tab2Component } from './tab2/tab2.component';
 import { CustomCurrencyPipe } from './custom-currency.pipe';
 
 export function initResx(resx: TranslateService) {
-   const locale = document['locale'] as string;
+   const locale = window.navigator.language;
   // const locale = localStorage.getItem('localeId');
   console.log(locale);
   if (locale !== undefined && locale !== null) {
@@ -39,7 +39,9 @@ export function initResx(resx: TranslateService) {
   return () => resx.loadResx();
 }
 
-const locale = localStorage.getItem('localeId');
+// const locale = localStorage.getItem('localeId');
+
+  const localeForPipes = window.navigator.language;
 
 // let locale22;
 
@@ -96,7 +98,7 @@ const routes = [
     },
     {
       provide: LOCALE_ID,
-      useValue: locale
+      useValue: localeForPipes
     },
     WindowRefService
   ],
