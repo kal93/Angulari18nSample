@@ -4,13 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4100",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "i18n": "ng xi18n --output-path locale",
     "AOT": "ng serve --aot",
     "start:ar": "ng build --prod --i18n-file src/locale/messages.ar.xlf --i18n-format xlf --i18n-locale ar",
+    "build": "ng build --aot --output-path dist/ --base-href /Angulari18nSample/",
     "build:ar": "ng build --prod --output-path dist/ar --base-href /ar/ --i18n-file=src/locale/messages.ar.xlf --i18n-format xlf --i18n-locale ar",
     "build:ar-base-href":"ng build --prod --output-path dist/ar --base-href /Angulari18nSample/ar/ --i18n-file=src/locale/messages.ar.xlf --i18n-format xlf --i18n-locale ar"
   },
