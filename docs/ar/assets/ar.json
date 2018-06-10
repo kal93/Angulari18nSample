@@ -1,0 +1,18 @@
+{
+    "Tab1":"علامة التبويب 1",
+    "Tab2":"علامة التبويب 2",
+    "Help":"مساعدة",
+    "Maaz" : "معاذ",
+
+    "LastName":"الكنية",
+    "FirstName":"الاسم الاول",
+    "MiddleName":"الاسم الأوسط",
+    "PatientID":"رقم المريض",
+    "NHS":"نح",
+    "SelectHID":"حدد HID",
+    "BillingAccountNumber":"رقم حساب الفوترة",
+    "CheckAll":"تحقق من الكل",
+
+    "Clear":"إعادة تعيين",
+    "Submit":"خضع"
+}
