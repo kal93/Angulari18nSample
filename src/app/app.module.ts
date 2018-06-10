@@ -29,7 +29,7 @@ export function initResx(resx: TranslateService) {
   console.log(locale);
   if (locale !== undefined && locale !== null) {
     // provide the path for resource bundle/json file
-    resx.resxPath = `/assets/${locale}.json`;
+    resx.resxPath = `./../assets/${locale}.json`;
   } else {
     // default locale for the first load
     // path for resource bundle of default locale
