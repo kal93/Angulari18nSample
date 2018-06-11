@@ -43,6 +43,10 @@ export function initResx(resx: TranslateService) {
 
   const localeForPipes = window.navigator.language;
 
+  export function getLocale() {
+    return window.navigator.language;
+  }
+
 // let locale22;
 
 registerLocaleData(localeAr, 'ar');
@@ -98,7 +102,7 @@ const routes = [
     },
     {
       provide: LOCALE_ID,
-      useValue: localeForPipes
+      useFactory:getLocale
     },
     WindowRefService
   ],
